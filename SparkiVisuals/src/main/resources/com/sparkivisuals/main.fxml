@@ -12,20 +12,21 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Text?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="Teste" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sparkivisuals.Controlador">
    <left>
       <VBox prefHeight="375.0" prefWidth="147.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
             <Label text="Painel de controle" />
             <HBox alignment="TOP_CENTER" prefHeight="25.0" prefWidth="72.0">
                <children>
-                  <Button mnemonicParsing="false" text="Play" />
-                  <Button mnemonicParsing="false" text="Stop" />
+                  <Button fx:id="tocarPlay" mnemonicParsing="false" onAction="#Play" text="Play" />
+                  <Button mnemonicParsing="false" onAction="#Stop" text="Stop" />
                </children>
             </HBox>
-            <TextArea prefHeight="200.0" prefWidth="200.0" />
+            <TextArea fx:id="areateste" prefHeight="200.0" prefWidth="200.0" />
          </children>
          <padding>
             <Insets top="10.0" />
@@ -57,6 +58,8 @@
       <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
             <Canvas height="200.0" width="200.0" />
+            <Text fx:id="meuText" layoutX="100.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Circle fx:id="Sparki" fill="DODGERBLUE" layoutX="227.0" layoutY="340.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
          </children>
       </Pane>
    </center>
