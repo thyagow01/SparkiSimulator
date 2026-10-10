@@ -12,7 +12,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Text?>
 
 <BorderPane fx:id="Teste" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sparkivisuals.Controlador">
@@ -24,6 +23,7 @@
                <children>
                   <Button fx:id="tocarPlay" mnemonicParsing="false" onAction="#Play" text="Play" />
                   <Button mnemonicParsing="false" onAction="#Stop" text="Stop" />
+                  <Button fx:id="walkbutton" mnemonicParsing="false" onAction="#Walk" text="Walk" />
                </children>
             </HBox>
             <TextArea fx:id="areateste" prefHeight="200.0" prefWidth="200.0" />
@@ -55,11 +55,10 @@
       </MenuBar>
    </top>
    <center>
-      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <Pane fx:id="CentroPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
             <Canvas height="200.0" width="200.0" />
             <Text fx:id="meuText" layoutX="100.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-            <Circle fx:id="Sparki" fill="DODGERBLUE" layoutX="227.0" layoutY="340.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
          </children>
       </Pane>
    </center>
